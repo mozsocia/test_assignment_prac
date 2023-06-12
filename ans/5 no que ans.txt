@@ -1,0 +1,11 @@
+
+5.Write the code to retrieve the "description" column from the "posts" table where the "id" is 2 using Laravel's query builder. Store the result in the $posts variable. Print the $posts variable.
+
+
+Answer:
+
+$posts = DB::table('posts')
+            ->where('id', 2)
+            ->pluck('description');
+
+print_r($posts);

@@ -1,0 +1,15 @@
+2.Write the code to retrieve the "excerpt" and "description" columns from the "posts" table using Laravel's query builder. Store the result in the $posts variable. Print the $posts variable.
+
+Answer: 
+
+use Illuminate\Support\Facades\DB;
+
+
+$posts = DB::table('posts')->select('excerpt', 'description')->get();
+
+foreach ($posts as $post) {
+    echo "Excerpt: " . $post->excerpt . "<br>";
+    echo "Description: " . $post->description . "<br>";
+}
+
+print_r($posts);

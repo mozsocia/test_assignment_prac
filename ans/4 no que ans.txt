@@ -1,0 +1,21 @@
+
+4.Write the code to retrieve the first record from the "posts" table where the "id" is 2 using Laravel's query builder. Store the result in the $posts variable. Print the "description" column of the $posts variable.
+
+
+
+Answer:
+
+
+
+$posts = DB::table('posts')->where('id', 2)->first();
+
+
+if(is_null($post)) {
+    return abort(404);
+}
+
+if ($posts) {
+    echo $posts->description;
+} else {
+    echo "No post found.";
+}

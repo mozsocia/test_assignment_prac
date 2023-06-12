@@ -1,0 +1,19 @@
+
+3.Describe the purpose of the distinct() method in Laravel's query builder. How is it used in conjunction with the select() method?
+
+
+Answer:
+
+The distinct() method in Laravel's query builder is used to retrieve unique values from a column or a combination of columns in the result set. It ensures that duplicate values are eliminated, so each value appears only once in the result.
+
+When used in conjunction with the select() method, the distinct() method allows you to specify which columns should be considered when determining uniqueness. 
+
+Here's an example to illustrate the usage of distinct() in conjunction with select():
+
+
+$uniqueEmails = DB::table('users')
+                ->select('email')
+                ->distinct()
+                ->get();
+
+In this example, we're querying the "users" table and selecting the "email" column. By applying the distinct() method, we ensure that only unique email addresses are returned in the result set.
