@@ -1,0 +1,10 @@
+
+10.Write the code to delete the record with the "id" of 3 from the "posts" table using Laravel's query builder. Print the number of affected rows.
+
+
+ 
+ Answer:
+
+$affectedRows = DB::table('posts')->where('id', 3)->delete();
+
+echo $affectedRows;

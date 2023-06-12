@@ -1,0 +1,15 @@
+
+8.Write the code to insert a new record into the "posts" table using Laravel's query builder. Set the "title" and "slug" columns to 'X', and the "excerpt" and "description" columns to 'excerpt' and 'description', respectively. Set the "is_published" column to true and the "min_to_read" column to 2. Print the result of the insert operation.
+
+Answer:
+
+$result = DB::table('posts')->insert([
+    'title' => 'X',
+    'slug' => 'X',
+    'excerpt' => 'excerpt',
+    'description' => 'description',
+    'is_published' => true,
+    'min_to_read' => 2
+]);
+
+echo $result;

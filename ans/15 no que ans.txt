@@ -1,0 +1,8 @@
+15.Write the code to increment the "min_to_read" column value of the record with the "id" of 3 in the "posts" table by 1 using Laravel's query builder. Print the number of affected rows.
+
+
+Answer:
+
+
+$affectedRows = DB::table('posts')->where('id', 3)->increment('min_to_read');
+echo $affectedRows;

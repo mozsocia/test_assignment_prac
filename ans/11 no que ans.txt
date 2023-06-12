@@ -1,0 +1,43 @@
+
+11.Explain the purpose and usage of the aggregate methods count(), sum(), avg(), max(), and min() in Laravel's query builder. Provide an example of each.
+
+
+ 
+
+
+
+Answer :
+
+count(): Calculates the number of records matching the query.
+Example:
+
+
+$count = DB::table('users')->count();
+echo $count;
+
+sum(): Calculates the sum of a column's values.
+Example:
+
+$sum = DB::table('orders')->sum('total_amount');
+echo $sum;
+
+
+avg(): Calculates the average of a column's values.
+Example:
+
+
+$average = DB::table('products')->avg('price');
+echo $average;
+
+max(): Retrieves the maximum value from a column.
+Example:
+
+
+$maxValue = DB::table('scores')->max('points');
+echo $maxValue;
+
+min(): Retrieves the minimum value from a column.
+Example:
+
+$minValue = DB::table('products')->min('price');
+echo $minValue;

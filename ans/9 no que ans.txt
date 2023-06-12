@@ -1,0 +1,13 @@
+
+9.Write the code to update the "excerpt" and "description" columns of the record with the "id" of 2 in the "posts" table using Laravel's query builder. Set the new values to 'Laravel 10'. Print the number of affected rows.
+
+Answer:
+
+$affectedRows = DB::table('posts')
+    ->where('id', 2)
+    ->update([
+        'excerpt' => 'Laravel 10',
+        'description' => 'Laravel 10'
+    ]);
+
+echo $affectedRows;

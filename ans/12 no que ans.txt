@@ -1,0 +1,11 @@
+
+12.Describe how the whereNot() method is used in Laravel's query builder. Provide an example of its usage.
+
+
+Answer:
+
+The whereNot() method in Laravel's query builder is used to add a "not equal" condition to the query. It specifies that a column's value should not be equal to a given value. Here's an example:
+
+$users = DB::table('users')->whereNot('status', 'inactive')->get();
+
+In this example, the whereNot() method is used to retrieve all the users whose "status" column is not equal to 'inactive'. This method adds a "WHERE status <> 'inactive'" condition to the query.

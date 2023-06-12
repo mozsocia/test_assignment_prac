@@ -1,3 +1,9 @@
 
 6.Explain the difference between the first() and find() methods in Laravel's query builder. How are they used to retrieve single records?
 
+Answer:
+
+first() retrieves the first record matching the query conditions. It returns an instance of the model or null if no matching record is found. It is commonly used when you want to retrieve a single record based on specific conditions.
+Example usage of first():
+
+find() retrieves a record by its primary key. It returns an instance of the model or null if no matching record is found. It is commonly used when you want to retrieve a record by its unique identifier.

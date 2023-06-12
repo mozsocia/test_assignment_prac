@@ -1,0 +1,20 @@
+13.Explain the difference between the exists() and doesntExist() methods in Laravel's query builder. How are they used to check the existence of records?
+
+
+
+Answer: 
+
+The exists() and doesntExist() methods in Laravel's query builder are used to check the existence of records:
+
+exists(): Returns true if records matching the query conditions exist, and false otherwise.
+Example:
+
+$exists = DB::table('users')->where('name', 'John')->exists();
+echo $exists ? 'Records exist' : 'No records exist';
+
+
+doesntExist(): Returns true if no records matching the query conditions exist, and false otherwise.
+Example:
+
+$doesntExist = DB::table('users')->where('name', 'John')->doesntExist();
+echo $doesntExist ? 'No records exist' : 'Records exist';

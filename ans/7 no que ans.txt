@@ -1,0 +1,7 @@
+7.Write the code to retrieve the "title" column from the "posts" table using Laravel's query builder. Store the result in the $posts variable. Print the $posts variable.
+
+
+ Answer:
+
+$posts = DB::table('posts')->pluck('title');
+print_r($posts);
